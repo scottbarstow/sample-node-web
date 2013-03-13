@@ -1,0 +1,15 @@
+en:
+  passport:
+    failure:
+      unauthenticated: 'You need to sign in or sign up before continuing.'
+      unconfirmed: 'You have to confirm your account before continuing.'
+      invalid: 'Invalid email or password.'
+      invalid_token: 'Invalid authentication token.'
+      password_neq_confirmation: "Password doesn't equals Password Confirmation"
+      invalid_password: 'Invalid password.'
+      invalid_password_format: 'length should be greater then 6'
+    registrations:
+      signed_up: 'Welcome! You have signed up successfully.'
+      signed_up_but_unconfirmed: 'A message with a confirmation link has been sent to your email address. Please open the link to activate your account.'
+    confirmations:
+      confirmed: 'Your account was successfully confirmed. You are now signed in.'

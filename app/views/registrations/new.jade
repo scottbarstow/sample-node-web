@@ -1,0 +1,24 @@
+h1 Sign Up
+hr
+
+!= formTagBegin({ action: path_to.signup, method: 'post', class: 'form-horizontal' })
+
+  != errorMessagesFor(user) 
+
+  .control-group
+    label.control-label Email
+    .controls
+      input(type="email", name="email", value="#{user.email || ''}").required
+  .control-group
+    label.control-label Password
+    .controls
+      input(type="password", name="password", autocomplete="off").required
+  .control-group
+    label.control-label Confirm Password
+    .controls
+      input(type="password", name="password_confirmation", autocomplete="off").required
+
+  .form-actions
+    button(type="submit")#btn-login.btn.btn-primary
+      i.icon-lock.icon-white
+      | Sign Up

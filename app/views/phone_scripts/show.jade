@@ -1,0 +1,46 @@
+ul.breadcrumb
+    li
+       a(href='/') Home
+       span.divider /
+    li
+       != link_to('phone scripts', pathTo.phone_scripts())
+       span.divider /
+    li.active
+       a(href='#') details
+
+.page-header
+  h1 Details of Phone Script
+
+div(about=path_to.phone_script(phonescript))
+  table.table.table-bordered
+    tbody
+      tr
+        td name
+        td
+          != phonescript.name
+        tr
+        td description
+        td
+          != phonescript.description
+        tr
+        td script
+        td
+          != phonescript.script
+        tr
+        td userId
+        td
+          != phonescript.userId
+        tr
+        td createdAt
+        td
+          != phonescript.createdAt
+        tr
+        td updatedAt
+        td
+          != phonescript.updatedAt
+
+.well
+  != linkTo('<i class="icon-edit icon-white"></i> Edit', pathTo.edit_phone_script(phonescript), {class: 'btn btn-primary'}) + ' '
+  != linkTo('<i class="icon-remove icon-white"></i> Delete', pathTo.phone_script(phonescript), {class: 'btn btn-danger', method: 'delete', remote: true, jsonp: '(function (u) { location.href = u; })'})
+  span= ' or '
+  != linkTo('Back to index', pathTo.phone_scripts())

@@ -1,0 +1,22 @@
+h1 Sign In
+hr
+
+!= formTagBegin({ action: path_to.signin, method: 'post', class: 'form-horizontal' })
+  .control-group
+    label.control-label Login with
+    .controls.buttons
+      != linkTo('Google', pathTo.googleAuth(), {class: 'btn'} )
+      != linkTo('Facebook', pathTo.facebookAuth(), {class: 'btn btn-primary'} )
+  .control-group
+    label.control-label Email
+    .controls
+      input(type="text", name="email").required
+  .control-group
+    label.control-label Password
+    .controls
+      input(type="password", name="password").required
+
+  .form-actions
+    button(type="submit")#btn-login.btn.btn-primary
+      i.icon-lock.icon-white
+      | Sign in

@@ -1,0 +1,14 @@
+.navbar.navbar-static-top
+    .navbar-inner
+        .container
+            a(class="brand", href="#") A Test App
+            ul.nav.pull-right
+                if current_user
+                    li!= linkTo(current_user.email, pathTo.profile() )
+                    li!= linkTo('Logout', pathTo.signout() )
+                else
+                    li!= linkTo('Login', pathTo.signin() )
+                    li!= linkTo('Sign Up', pathTo.signup() )
+
+                
+                

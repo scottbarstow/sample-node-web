@@ -1,0 +1,14 @@
+!= errorMessagesFor(phonescript) 
+.control-group
+  != form.label("name", false, {class: "control-label"})
+  .controls
+    != form.input("name")
+.control-group
+  != form.label("description", false, {class: "control-label"})
+  .controls
+    != form.input("description")
+.control-group
+  != form.label("script", false, {class: "control-label"})
+  .controls
+    != form.textarea("script", {rows: 5})
+

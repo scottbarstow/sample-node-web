@@ -1,0 +1,38 @@
+{ "name": "sample web app"
+, "version": "0.0.1"
+, "engines": ["node >= 0.8.0"]
+, "main": "server.js"
+, "dependencies":
+    { "ejs":                 "*"
+    , "ejs-ext":             "latest"
+    , "jade":                "*"
+    , "jade-ext":            "latest"
+    , "express":             "~3.x"
+    , "compound":            ">= 1.1.0"
+    , "co-assets-compiler":  "latest"
+    , "jugglingdb":          ">= 0.1.0"
+    , "jugglingdb-mongodb":  "latest"
+    , "coffee-script":       ">= 1.6.1"
+    , "stylus":              "latest"
+    , "seedjs":              "latest"
+    , "crypto":              "*"
+    , "passport":            "latest"
+    , "passport-local":      "latest"
+    , "passport-google":     "latest"
+    , "passport-facebook":   "latest"
+    , "connect-flash":       "latest"
+    , "bcrypt":              "latest"
+    , "railway-pagination":  "latest"
+    , "nodemailer":          "latest"
+    , "email-templates":     "latest"
+    , "railway-mailer":      "git://github.com/bioform/railway-mailer.git"
+    },
+    "devDependencies":
+    { "nodeunit":         "*"
+    , "sinon":            "*"
+    , "semicov":          "*"
+    }
+    , "scripts":
+    { "test": "nodeunit test/*/*"
+    }
+}

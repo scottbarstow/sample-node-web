@@ -1,0 +1,22 @@
+development:
+  mailer: smtp
+  url: "http://localhost:8888"
+  from: ""
+  host: ""
+  port: 
+  use_authentication: true
+  user: ""
+  pass: ""
+production:
+  mailer: smtp
+  url: "http://localhost:8888"
+  from: ""
+  host: ""
+  port: 587
+  use_authentication: true
+  user: ""
+  pass: ""
+test:
+  mailer: test
+  url: "http://localhost:8888"
+  from: ""

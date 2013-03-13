@@ -1,0 +1,14 @@
+module.exports =  
+  development:
+    driver:   "mongodb",
+    url:      "mongodb://localhost/didify_dev"
+  ,
+  test:
+    driver:   "mongodb",
+    url:      "mongodb://localhost/didify_prod"
+  ,
+  production:
+    driver:   "mongodb",
+    url:      "mongodb://localhost/didify_test"
+
+

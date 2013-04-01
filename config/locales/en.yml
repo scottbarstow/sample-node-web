@@ -25,27 +25,6 @@ en:
     passwords:
       send_instructions: 'You will receive an email with instructions about how to reset your password in a few minutes.'
       updated: 'Your password was changed successfully. You are now signed in.'
-  purchase:
-    number_not_selected: 'Select at least one phone number please'
-    no_new_numbers: 'These phone numbers are already in your cart'
-    some_in_cart: 'Some of selected numbers already was in your cart'
-    login_required: 'You should be logged in before continue'
-    need_card_details: 'Please provide card details'
-  bandwidth:
-    invalid_state: 'The state parameter value is invalid'
-    state_is_mandatory: 'The state parameter is mandatory'
-    validation-error: 'Specify a state, ZIP, or area code with your query'
-  stripe:
-    plans:
-      number_subscription_basic: 'One Year Basic'
-      number_subscription_premium: 'One Year Premium'
-  phone_numbers:
-    failure:
-      incorrect_format: 'Incorrect phone number format'
-      incorrect_validation_code: 'Incorrect validation code'
-      unique: 'Provided phone number is already registered'
-
-    validation_sms_sent: 'Validation code was sent. Please check your phone number.'
   date:
     month:
       1: 'January'

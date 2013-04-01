@@ -1,4 +1,17 @@
-<html>
-	Registration confirmation
-	<a href="{{ url }}{{ confirmation_link }}">link</a>.
-</html>
+{% extends 'emails/layout.html' %}
+
+{% block content %}
+
+	<p>
+		Thank you for registering with DIDify!  
+		<br/>
+		<br/>
+		
+		Click on the link below to confirm your registration or paste the url into your browser.
+		Thanks and welcome aboard!
+		<br/>
+		<br/>
+		<a href="{{ url }}{{ confirmation_link }}">{{ url }}{{ confirmation_link }}</a>.
+	</p>
+
+{% endblock %}

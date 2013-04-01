@@ -4,14 +4,14 @@ salt = bcrypt.genSaltSync( 10 )
 encrypted_password = bcrypt.hashSync('111111' + pepper, salt)
 
 User.seed ->
-    email: 'admin@yourcompany.com'
+    email: 'admin@yourco.com'
     is_admin: true
     encrypted_password: encrypted_password
     confirmed_at: Date.now()
     id: 1
 
 User.seed ->
-    email: 'customer1@yourcompany.com'
+    email: 'customer1@gmail.com'
     is_admin: false
     encrypted_password: encrypted_password
     confirmed_at: Date.now()

@@ -1,10 +1,14 @@
-h1 Sign Up
-hr
+- contentFor('header', 'Sign Up')
 
 != formTagBegin({ action: path_to.signup, method: 'post', class: 'form-horizontal' })
 
   != errorMessagesFor(user) 
 
+  .control-group
+    label.control-label Sign Up with
+    .controls.buttons
+      != linkTo('Google', pathTo.googleAuth(), {class: 'btn'} )
+      != linkTo('Facebook', pathTo.facebookAuth(), {class: 'btn btn-primary'} )
   .control-group
     label.control-label Email
     .controls
@@ -22,3 +26,7 @@ hr
     button(type="submit")#btn-login.btn.btn-primary
       i.icon-lock.icon-white
       | Sign Up
+
+    .pull-right
+        div
+          include _shared_links

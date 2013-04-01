@@ -1,5 +1,6 @@
 load 'application'
 
 action 'index', ->
-    @title = 'Didify'
+    @title = 'Sample App'
+    @crit = {}
     render()

@@ -1,5 +1,4 @@
-h1 Sign In
-hr
+- contentFor('header', 'Sign In')
 
 != formTagBegin({ action: path_to.signin, method: 'post', class: 'form-horizontal' })
   .control-group
@@ -20,3 +19,7 @@ hr
     button(type="submit")#btn-login.btn.btn-primary
       i.icon-lock.icon-white
       | Sign in
+
+    .pull-right
+        div
+          include ../registrations/_shared_links

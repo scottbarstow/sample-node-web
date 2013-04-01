@@ -1,11 +1,19 @@
 en:
+  failure:
+    application: "Internal Application Error. Please contact us to help you."
+    unauthorized_access: "You are not authorized for this action."
+    login_to_continue: "You should login to continue."
+    email:
+      send: "Internal Application Error while sending a message. Please contact us to help you."
+      not_found: "not found"
   passport:
     failure:
+      already_confirmed: "was already confirmed, please try signing in"
       unauthenticated: 'You need to sign in or sign up before continuing.'
       unconfirmed: 'You have to confirm your account before continuing.'
       invalid: 'Invalid email or password.'
       invalid_token: 'Invalid authentication token.'
-      password_neq_confirmation: "Password doesn't equals Password Confirmation"
+      password_neq_confirmation: "Password doesn't equal Password Confirmation"
       invalid_password: 'Invalid password.'
       invalid_password_format: 'length should be greater then 6'
     registrations:
@@ -13,3 +21,42 @@ en:
       signed_up_but_unconfirmed: 'A message with a confirmation link has been sent to your email address. Please open the link to activate your account.'
     confirmations:
       confirmed: 'Your account was successfully confirmed. You are now signed in.'
+      send_instructions: 'You will receive an email with instructions about how to confirm your account in a few minutes.'
+    passwords:
+      send_instructions: 'You will receive an email with instructions about how to reset your password in a few minutes.'
+      updated: 'Your password was changed successfully. You are now signed in.'
+  purchase:
+    number_not_selected: 'Select at least one phone number please'
+    no_new_numbers: 'These phone numbers are already in your cart'
+    some_in_cart: 'Some of selected numbers already was in your cart'
+    login_required: 'You should be logged in before continue'
+    need_card_details: 'Please provide card details'
+  bandwidth:
+    invalid_state: 'The state parameter value is invalid'
+    state_is_mandatory: 'The state parameter is mandatory'
+    validation-error: 'Specify a state, ZIP, or area code with your query'
+  stripe:
+    plans:
+      number_subscription_basic: 'One Year Basic'
+      number_subscription_premium: 'One Year Premium'
+  phone_numbers:
+    failure:
+      incorrect_format: 'Incorrect phone number format'
+      incorrect_validation_code: 'Incorrect validation code'
+      unique: 'Provided phone number is already registered'
+
+    validation_sms_sent: 'Validation code was sent. Please check your phone number.'
+  date:
+    month:
+      1: 'January'
+      2: 'February'
+      3: 'March'
+      4: 'April'
+      5: 'May'
+      6: 'June'
+      7: 'July'
+      8: 'August'
+      9: 'September'
+      10: 'October'
+      11: 'November'
+      12: 'December'

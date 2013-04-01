@@ -1,0 +1,7 @@
+-c
+-t 20000
+--compilers coffee:coffee-script
+--globals CookieAccessInfo,Cookie,CookieJar
+-r should
+-r coffee-script
+-r test/test_helper.coffee

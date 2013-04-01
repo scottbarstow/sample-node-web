@@ -1,15 +1,15 @@
-{ "name": "sample web app"
+{ "name": "sampleapp"
 , "version": "0.0.1"
 , "engines": ["node >= 0.8.0"]
 , "main": "server.js"
 , "dependencies":
-    { "ejs":                 "*"
-    , "ejs-ext":             "latest"
+    { "timezone-js":         "latest"
     , "jade":                "*"
     , "jade-ext":            "latest"
     , "express":             "~3.x"
     , "compound":            ">= 1.1.0"
     , "co-assets-compiler":  "latest"
+    , "co-nib":              "latest"
     , "jugglingdb":          ">= 0.1.0"
     , "jugglingdb-mongodb":  "latest"
     , "coffee-script":       ">= 1.6.1"
@@ -22,17 +22,22 @@
     , "passport-facebook":   "latest"
     , "connect-flash":       "latest"
     , "bcrypt":              "latest"
-    , "railway-pagination":  "latest"
+    , "railway-pagination":  "git://github.com/1602/railway-pagination.git"
     , "nodemailer":          "latest"
-    , "email-templates":     "latest"
-    , "railway-mailer":      "git://github.com/bioform/railway-mailer.git"
+    , "co-juice-mailer":     "latest"
+    , "secure_random":       "latest"
     },
     "devDependencies":
-    { "nodeunit":         "*"
-    , "sinon":            "*"
-    , "semicov":          "*"
+    { 
+        "mocha":             "1.8.1",
+        "should":            "1.2.2",
+        "semicov":           "0.1.1",
+        "co-generators":     "latest",
+        "migrate":           "latest",
+        "supertest":         "0.5.1"
     }
     , "scripts":
-    { "test": "nodeunit test/*/*"
+    { 
+        "test": "NODE_ENV=test mocha test/*/*"
     }
 }

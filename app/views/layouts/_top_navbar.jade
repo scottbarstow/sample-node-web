@@ -1,0 +1,23 @@
+.navbar.navbar-static-top
+  .navbar-inner
+    project = 'Sample App'
+    if current_user
+      != linkTo(project, pathTo.home(), {class: 'brand'} )
+    else
+      a(class="brand", href="/")= project
+
+    ul.nav
+      if current_user
+        if current_user.isAdmin()
+          li!= linkTo('Users', pathTo.admin_users )
+
+    ul.nav.pull-right
+      if current_user
+        li!= linkTo(current_user.email, pathTo.profile() )
+        li!= linkTo('Logout', pathTo.signout )
+      else
+        li!= linkTo('Login', pathTo.signin )
+        li!= linkTo('Sign Up', pathTo.signup )
+
+                
+                

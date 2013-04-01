@@ -95,7 +95,7 @@ module.exports = function(compound) {
     //////////////////////////////////
 
     app.post('/signin',
-        passport.authenticate('local', { successRedirect: pathTo.home(),
+        passport.authenticate('local', { successReturnToOrRedirect: pathTo.home(),
                                          failureRedirect: pathTo.signin(),
                                          failureFlash: true })
     );
@@ -109,7 +109,7 @@ module.exports = function(compound) {
     // the process by verifying the assertion.  If valid, the user will be
     // logged in.  Otherwise, authentication has failed.
     app.get('/auth/google/return', 
-      passport.authenticate('google', { successRedirect: pathTo.home(),
+      passport.authenticate('google', { successReturnToOrRedirect: pathTo.home(),
                                         failureRedirect: pathTo.signin() }));
 
     // Redirect the user to Facebook for authentication.  When complete,
@@ -122,7 +122,7 @@ module.exports = function(compound) {
     // access was granted, the user will be logged in.  Otherwise,
     // authentication has failed.
     app.get('/auth/facebook/callback', 
-      passport.authenticate('facebook', { successRedirect: pathTo.home(),
+      passport.authenticate('facebook', { successReturnToOrRedirect: pathTo.home(),
                                           failureRedirect: pathTo.signin() }));
 
 

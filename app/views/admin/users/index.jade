@@ -1,0 +1,25 @@
+- contentFor('header', 'Users')
+
+if users.length
+
+  table.table.table-striped
+    thead
+      tr
+        th ID
+        th.span3 Confirmed At
+        th.span2 Actions
+    tbody
+      each user in users
+        tr
+         td
+            != user.email
+          td
+            != dt(user.confirmed_at)
+          td
+            != linkTo('<i class="icon-remove icon-white"></i> Delete', pathTo.admin_user(user), {class: 'btn btn-mini btn-danger', method: 'delete', remote: true, jsonp: '(function (u) {location.href = u;})'})
+
+else
+
+  p.alert.alert-block.alert-info
+    strong No users were found.
+

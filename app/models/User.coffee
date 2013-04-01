@@ -4,9 +4,9 @@ utils  = require '../utils'
 
 module.exports = (compound, User) ->
     app = compound.app
-    log = compound.logger
 
-    User.hasMany compound.models.PhoneScript,   {as: 'phoneScripts',  foreignKey: 'user_id'}
+    User::isAdmin = ->
+        !!@is_admin
 
     User::validPassword = (password) ->
         pepper = app.get('pepper')
@@ -16,6 +16,15 @@ module.exports = (compound, User) ->
 
     User.validatesUniquenessOf 'email'
     User.validatesFormatOf 'email', with: checkEmail
+
+    User::initResetPasswordToken = (next) ->
+        crypto.randomBytes 15, (err, buf) =>
+            if err
+                console.log "Error during generating 'confirmation_token'. See: " + err
+                next(err)
+            else
+                @reset_password_token = buf.toString('hex')
+            this.save( next )
 
     # generate confirmation token and password
     User.beforeSave = (next) ->
@@ -30,7 +39,7 @@ module.exports = (compound, User) ->
     User.beforeCreate = (next) ->
         crypto.randomBytes 15, (ex, buf) =>
             if ex
-                log.write "Error during generating 'confirmation_token'. See: " + ex
+                console.log "Error during generating 'confirmation_token'. See: " + ex
             else
                 @confirmation_token = buf.toString('hex')
           
@@ -47,7 +56,7 @@ module.exports = (compound, User) ->
 
         User.findOne where: {email: email}, (err, user) ->
             
-            #log.write "====>" + googleId + "<====>>>> " + JSON.stringify(data.profile)
+            #console.log "====>" + googleId + "<====>>>> " + JSON.stringify(data.profile)
 
             if  user
                 user.last_sign_in_at = Date.now()

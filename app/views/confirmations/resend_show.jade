@@ -1,0 +1,12 @@
+- contentFor('header', 'Resend confirmation instructions')
+
+!= formTagBegin({ action: path_to.resend_users_confirmation, method: 'post', class: 'form-horizontal' })
+
+  .control-group
+    label.control-label.required Email
+    .controls
+      input(type="email", name="email")
+
+  .form-actions
+    button(type="submit")#btn-login.btn.btn-primary
+      | Resend confirmation instructions

@@ -1,0 +1,24 @@
+!!! 5
+html(lang="en")
+  head
+    include _head
+  body
+    include _top_navbar
+
+    .container-fluid
+      .row-fluid
+        .span2
+          include _sidebar
+        .span10
+          include _flash
+
+          if contentFor('header').length > 0
+            .page-header
+              h1
+                != contentFor('header')
+                
+          != body
+
+      hr
+      footer
+        p © YourCo #{new Date().getFullYear()}

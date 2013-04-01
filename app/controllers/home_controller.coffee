@@ -1,5 +1,7 @@
 load 'application'
 
+layout 'internal'
+
 before use 'authorize'
 
 action 'index', ->

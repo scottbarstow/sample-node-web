@@ -1,18 +1,22 @@
 module.exports =  
   development:
-    url:      "http://localhost:8888/",
+    url:      "http://localhost:8888/"
     facebook:
-      app_id: '',
+      app_id: ''
       app_secret: ''
-  ,
+    analytics:
+      code: ''
   test:
-    url:      "http://localhost:8888/",
+    url:      "http://localhost:8888/"
     facebook:
-      app_id: '',
+      app_id: ''
       app_secret: ''
-  ,
+    analytics:
+      code: ''
   production:
-    url:      "http://localhost:8888/",
+    url:      "http://localhost:8888/"
     facebook:
-      app_id: '',
+      app_id: ''
       app_secret: ''
+    analytics:
+      code: ''

@@ -35,6 +35,10 @@ exports.blank = function(v) {
     if (typeof v === 'undefined') return true;
     if (v instanceof Array && v.length === 0) return true;
     if (v === null) return true;
-    if (typeof v == 'string' && v === '') return true;
+    if (typeof v == 'string' && v.trim().length === 0) return true;
     return false;
+}
+
+exports.escape = function(s){
+    return (''+s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#x27;').replace(/\//g,'&#x2F;')
 }

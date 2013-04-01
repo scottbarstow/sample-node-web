@@ -7,9 +7,9 @@ It also already works for FB and Google authentication.
 
 ## Installation Instructions ##
 
-install nodejs
-run: "sudo npm install compound -g"
-run: "sudo npm install node-gyp-g"
-run: "npm install -l"
-Create initial users with: "compound sd"
-Run app: "compound s" or "node server"
+1. install nodejs
+2. run: "sudo npm install compound -g"
+3. run: "sudo npm install node-gyp-g"
+4. run: "npm install -l"
+5. Create initial users with: "compound sd"
+6. Run app: "compound s" or "node server"
